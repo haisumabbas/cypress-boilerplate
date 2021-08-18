@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/haisumabbas/cypress-boilerplate/issues"
   },
-  "homepage": "https://github.com/haisumabbas/cypress-boilerplate#readme"
+  "homepage": "https://github.com/haisumabbas/cypress-boilerplate#readme",
+  "devDependencies": {
+    "cypress": "^8.3.0"
+  }
 }
