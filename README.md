@@ -24,12 +24,12 @@ npm init -y
 ```JavaScript
 npm install cypress -D
 ```
-2. In case you're behing proxy, you can download the Cypress Binary from here and setup its environment variables which are mentioned over here.
+2. In case you're behing proxy, you can download the Cypress Binary from [here](https://docs.cypress.io/guides/getting-started/installing-cypress#Download-URLs) and setup its environment variables which are mentioned over [here](https://docs.cypress.io/guides/getting-started/installing-cypress#Install-binary).
 3. This command will initiate the download nad install process for cypress
     * -D flag indicates that the installation is to be done by managing the package in dev dependencies.
     * -g flag can be used when installation is meant at a global level.
 4. When installation is completed, following logs will appear on the terminal.
-    * You can now open Cypress by running: node_modules\.bin\cypress open
+    * You can now open Cypress by running: node_modules\\.bin\cypress open
 5. Verify the cypress installation using the following command
 ```JavaScript
 1. node_modules\.bin\cypress verify OR
@@ -40,3 +40,18 @@ npm install cypress -D
 1. node_modules\.bin\cypress open OR
 2. npx cypress open
 ```
+
+## Project Structure
+TBA
+
+## Configurations & Environments
+TBA
+
+## Reporters
+TBA
+
+## Docker
+TBA
+
+## Azure Pipeline
+TBA
