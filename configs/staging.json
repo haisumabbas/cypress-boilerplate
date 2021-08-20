@@ -1,0 +1,5 @@
+{
+    "baseUrl": "",
+    "extends": "./cypress.json",
+    "$schema": "https://on.cypress.io/cypress.schema.json"
+ }

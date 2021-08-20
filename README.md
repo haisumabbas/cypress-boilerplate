@@ -42,10 +42,20 @@ npm install cypress -D
 ```
 
 ## Project Structure
-TBA
+Inside cypress directory, there are multiple sub-directories which can be managed for the following
+* cypress/fixtures - It can be used to manage the test data
+* cypress/integration - It can be used to manage the Page Object Models, Utilities, Specs by creating few more sub directories.    
 
 ## Configurations & Environments
-TBA
+1. A configs folder is created to manage the standard environments for this automation project. This configs folder contains config file for respective environment. 
+    * Dev
+    * QA
+    * Staging
+    * Production
+2. Each of the enviornment config is extended from cypress.json configuration file which is treated as base configuration file.
+3. The required scripts are also available in the package.json file to execute spec file(s) in the headless mode.
+
+Note: Make sure you update the baseUrl before running any test command or spec file.
 
 ## Reporters
 TBA

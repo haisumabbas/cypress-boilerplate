@@ -4,7 +4,10 @@
   "description": "Cypress boilerplate to kickoff and setup an automation project on the go.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx cypress run --config-file ./configs/dev.json",
+    "qa": "npx cypress run --config-file ./configs/qa.json",
+    "staging": "npx cypress run --config-file ./configs/staging.json",
+    "prod": "npx cypress run --config-file ./configs/prod.json"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/haisumabbas/cypress-boilerplate#readme",
   "devDependencies": {
+    "@bahmutov/cypress-extends": "^1.1.0",
     "cypress": "^8.3.0"
   }
 }
