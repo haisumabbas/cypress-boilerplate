@@ -1,0 +1,9 @@
+FROM cypress/base:12.1.0
+RUN mkdir /app
+WORKDIR /app
+COPY . /app
+RUN npm install
+RUN npx cypress verify
+
+## CMD ["npm", "run", "dev"]
+## RUN or CMD on line 8 depends on your requirements.

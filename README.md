@@ -92,4 +92,16 @@ require('cypress-mochawesome-reporter/plugin')(on)
 import 'cypress-mochawesome-reporter/register'
 ```
 ## Docker
-TBA
+1. Create a **.dockerignore** file at the root directory.
+    * Add all required details for the docker ignore file.
+2. Create a **Docker File** file at the root directory.
+    * Cypress offers three main images. The following snippet can be changed as per need. The details of those iamges can be found [here](https://github.com/cypress-io/cypress-docker-images).
+```Docker
+FROM cypress/base:12.1.0
+RUN mkdir /app
+WORKDIR /app
+COPY . /app
+RUN npm install
+RUN $(npm bin)/cypress verify
+CMD ["npm", "run", "dev"]
+```
