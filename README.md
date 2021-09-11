@@ -1,6 +1,22 @@
 # cypress-boilerplate
 Cypress boilerplate to kickoff and set up an automation project on the go.
+## Pre - Requisites
+1. Install Visual Code Studio from [Visual Code Studio Official Website](https://code.visualstudio.com/)
+2. Install node.js from [Node JS Official Website](https://nodejs.org/en/)
+    * Verify node.js installation using the terminal. 
+    * Type **node --version** to verify the current node version on your host machine.
+    * Verify the same for Node Package Manager using **npm --version**.
+    * Make sure you don't fall behind and have almost the latest version of these. Don't forget to verify the node and npm version as  it's possible that a different versions were used for both in this project.
 
+## Project Setup
+1. Clone this project.
+2. Open the terminal and type
+```JavaScript
+npm install
+```
+3. Project setup will be completed and you're good to go.
+
+# Detailed steps to setup the Cypress Automation Project from Scratch
 ## Pre - Requisites
 1. Install Visual Code Studio from [Visual Code Studio Official Website](https://code.visualstudio.com/)
 2. Install node.js from [Node JS Official Website](https://nodejs.org/en/)
