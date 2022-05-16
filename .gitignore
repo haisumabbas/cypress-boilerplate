@@ -107,3 +107,4 @@ dist
 cypress/videos
 cypress/reports
 cypress/screenshots
+cypress/report

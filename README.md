@@ -64,7 +64,7 @@ Inside the cypress directory, there are multiple sub-directories that can be man
 * **cypress/integration** - It will contain the specs files based on different scenarios.
 * **cypress/reports** - It will contain the reports generated once test execution is completed.
 * **cypress/screenshots** - It will contain the screenshots generated for failed test cases.    
-* **cypress/support/pageObjects** - It will contain the page objects.
+* **cypress/support/pageobjects** - It will contain the page objects.
 * **cypress/support/utilities** - It will contain the utility functions required in the test automation project.
 
 ## Configurations & Environments
@@ -107,6 +107,52 @@ require('cypress-mochawesome-reporter/plugin')(on)
 ```JavaScript
 import 'cypress-mochawesome-reporter/register'
 ```
+
+### Mochawesome
+To configure **Mochawesome Report with inline assets**, it requires a few packages to be installed to create the reports for each spec, merge the spec files into one report and clear the reports for next iteration. In order to do, open the terminal and use the following commands. 
+
+To remove reports folder before next iteration
+```JavaScript
+npm i --save-dev rimraf
+```
+
+For reporter
+```JavaScript
+npm i --save-dev mochawesome
+```
+
+To merge mochawesome spec(s) reports
+```JavaScript
+npm i --save-dev mochawesome-merge
+```
+
+Now update your base configuration with the following reporter properties, which in our case is **cypress.json** from which other configurations extend from.
+```json
+{
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "inline": true,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "longDate"
+    },
+    "video": false
+}
+```
+
+## Email Report
+It is some times important to send a report to keep concerned stakeholders in loop. For this purpose, the generated report can be sent to them. So, inorder to fullfil this requirement start by opening the terminal and install the following package
+
+```JavaScript
+npm i --save-dev nodemailer
+```
+
+Once installed, use the send-report.js to review, setting up the environment variables for user credentials, setting up the path of report and sending it.
+
+
 ## Docker
 1. Create a **.dockerignore** file at the root directory.
     * Add all required details for the docker ignore file.

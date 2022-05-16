@@ -1,5 +1,5 @@
 {
-   "baseUrl": "",
+   "baseUrl": "https://www.saucedemo.com/",
    "extends": "./cypress.json",
    "$schema": "https://on.cypress.io/cypress.schema.json"
 }

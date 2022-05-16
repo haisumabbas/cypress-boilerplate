@@ -1,14 +1,20 @@
 {
-    "baseUrl": "",
     "$schema": "https://on.cypress.io/cypress.schema.json",
-    "reporter": "cypress-mochawesome-reporter",
+    "reporter": "mochawesome",
     "reporterOptions": {
-        "reportDir": "cypress/reports",
-        "charts": true,
-        "reportPageTitle": "Cypress - Automation Test Report",
-        "embeddedScreenshots": true,
-        "inlineAssets": true,
-        "overWrite": true
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "inline": true,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "longDate"
     },
-    "video": false
+    "video": false,
+    "baseUrl": "https://www.saucedemo.com/",
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 10000,
+    "execTimeout": 60000,
+    "pageLoadTimeout": 20000,
+    "watchForFileChanges": true
 }
